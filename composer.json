@@ -1,0 +1,14 @@
+{
+    "name": "fishingboy/external_sort",
+    "description": "external sort PHP library",
+    "require": {
+        "php": ">=5.2.0"
+    },
+    "authors": [
+        {
+            "name": "fishingboy",
+            "email": "et282523@hotmail.com"
+        }
+    ],
+    "version": "1.0.0"
+}
