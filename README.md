@@ -7,6 +7,20 @@
   
   拉出來放一個專案是為了可以貢獻到 Packagist 
   讓有需要的人可以使用 Componser 進行安裝
-  
-  不過目前還沒有照著規格去寫，所以不知道有沒有支援 autoload
-  晚點會研究一下並調整
+
+  安裝請下
+    
+  `  
+    {
+        "require": {
+            "fishingboy/external_sort": "dev-master"
+        }
+    }
+  `  
+
+
+  載入請用
+
+  `
+  use fishingboy\external_sort\External_sort;
+  `
