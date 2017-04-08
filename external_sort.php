@@ -1,4 +1,7 @@
 <?php
+
+namespace fishingboy\external_sort;
+
 /**
  * 外部排序
  *
