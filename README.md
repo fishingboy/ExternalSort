@@ -11,6 +11,12 @@ Available on Packagist for installation via Composer.
 
 ## Installation
 
+```bash
+composer require fishingboy/external_sort
+```
+
+Or add it manually to `composer.json`:
+
 ```json
 {
     "require": {

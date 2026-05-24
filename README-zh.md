@@ -13,6 +13,12 @@
 
 ## 安裝
 
+```bash
+composer require fishingboy/external_sort
+```
+
+或手動加入 `composer.json`：
+
 ```json
 {
     "require": {
