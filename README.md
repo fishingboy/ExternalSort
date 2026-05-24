@@ -1,8 +1,9 @@
 # ExternalSort - PHP External Sort
 
-![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Packagist Version](https://img.shields.io/packagist/v/fishingboy/external_sort.svg)
+[![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)](https://github.com/fishingboy/ExternalSort/actions)
+[![Packagist Version](https://img.shields.io/packagist/v/fishingboy/external_sort.svg)](https://packagist.org/packages/fishingboy/external_sort)
+[![Downloads](https://img.shields.io/packagist/dt/fishingboy/external_sort.svg?label=Downloads)](https://packagist.org/packages/fishingboy/external_sort)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [繁體中文](README-zh.md) | **English**
 
@@ -41,3 +42,7 @@ $sorter = new External_sort([
 $sorter->add_data($value);  // accepts a single value or an array; call repeatedly
 $sorter->create_result();   // performs k-way merge and writes to result_file
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
