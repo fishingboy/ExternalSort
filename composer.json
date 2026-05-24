@@ -2,7 +2,7 @@
     "name": "fishingboy/external_sort",
     "description": "external sort PHP library",
     "require": {
-        "php": ">=5.2.0"
+        "php": ">=7.4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.0"
