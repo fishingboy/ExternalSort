@@ -2,6 +2,7 @@
 
 ![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Packagist Version](https://img.shields.io/packagist/v/fishingboy/external_sort.svg)
 
 [繁體中文](README-zh.md) | **English**
 
