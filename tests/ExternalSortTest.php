@@ -126,4 +126,20 @@ class ExternalSortTest extends TestCase
 
         $this->assertSame(range(1, 50), $this->readNumbers());
     }
+
+    // 超過 10000 筆，驗證舊版迴圈上限 bug 已修正
+    public function testMoreThan10000Items(): void
+    {
+        $sorter = new External_sort([
+            'block_size'  => 1000,
+            'result_file' => $this->resultFile,
+            'data_type'   => 'number',
+        ]);
+
+        $data = range(10001, 1);
+        $sorter->add_data($data);
+        $sorter->create_result();
+
+        $this->assertSame(range(1, 10001), $this->readNumbers());
+    }
 }
