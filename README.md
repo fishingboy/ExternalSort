@@ -1,28 +1,35 @@
-# ExternalSort - PHP 外部排序法
+# ExternalSort - PHP External Sort
 
 ![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)
 
-  很久以前寫的 PHP 外部排序法
-  主要是因為如果要排序的資料非常大，大到在記憶體內無法排序時
-  可以使用這個外部排序來排，並可以指定一個數量的上限，超過上限才會用外部排序的機制
-  在上限內的話則會在記憶體內做完排序就把結果輸出出去
-  
-  拉出來放一個專案是為了可以貢獻到 Packagist 
-  讓有需要的人可以使用 Composer 進行安裝
+[繁體中文](README-zh.md) | **English**
 
-  安裝請下
-    
-  `  
-    {
-        "require": {
-            "fishingboy/external_sort": "dev-master"
-        }
+A PHP library for external merge sort — designed for datasets too large to sort in memory.
+You can set a `block_size` limit: data within the limit is sorted in memory, while larger datasets are split into sorted temporary files and merged via a k-way merge.
+
+Available on Packagist for installation via Composer.
+
+## Installation
+
+```json
+{
+    "require": {
+        "fishingboy/external_sort": "dev-master"
     }
-  `  
+}
+```
 
+## Usage
 
-  載入請用
+```php
+use fishingboy\external_sort\External_sort;
 
-  `
-  use fishingboy\external_sort\External_sort;
-  `
+$sorter = new External_sort([
+    'block_size'  => 1000,       // max rows buffered in memory before flushing to a temp file
+    'result_file' => 'out.txt',  // output path for the final sorted result
+    'data_type'   => 'number',   // 'number' (int cast) or 'text' (string trim)
+]);
+
+$sorter->add_data($value);  // accepts a single value or an array; call repeatedly
+$sorter->create_result();   // performs k-way merge and writes to result_file
+```
