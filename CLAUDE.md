@@ -40,9 +40,20 @@ $sorter->create_result();    // 將所有暫存檔進行 k-way merge，輸出至
 - **`get_row()`** 參照了從未定義的 `$this->customized`、`$this->row_curr`、`$this->row_end`、`$this->records`，是舊版本留下的廢棄壞程式碼。
 - **`get_result()`** 是除錯用的輔助方法，會直接 echo 含 HTML `<br>` 標籤的原始內容，不適合在正式環境使用。
 
-## 無自動化測試
+## 測試
 
-此專案沒有任何自動化測試。手動測試需要直接撰寫 PHP 腳本呼叫 `add_data()` 與 `create_result()`。
+使用 PHPUnit 10（需要 PHP 8.1+）：
+
+```bash
+composer install
+./vendor/bin/phpunit tests/
+```
+
+執行單一測試案例：
+
+```bash
+./vendor/bin/phpunit tests/ExternalSortTest.php --filter testSortNumbersExternalMerge
+```
 
 ## Git 提交規範
 

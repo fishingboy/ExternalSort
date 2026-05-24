@@ -130,21 +130,6 @@ class External_sort
     }
 
 
-    public function get_row()
-    {
-        if ($this->customized)
-        {
-            if ($this->row_curr <= $this->row_end)
-                return $this->records[$this->row_curr++];
-            else
-                return false;
-        }
-        else
-        {
-            return db_object($this->records);
-        }
-    }
-
     public function get_result()
     {
         // 把剩餘的資料寫入
