@@ -1,6 +1,7 @@
 {
     "name": "fishingboy/external_sort",
     "description": "external sort PHP library",
+    "license": "MIT",
     "require": {
         "php": ">=7.4.0"
     },

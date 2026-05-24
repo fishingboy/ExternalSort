@@ -1,6 +1,7 @@
 # ExternalSort - PHP 外部排序法
 
 ![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 **繁體中文** | [English](README.md)
 
