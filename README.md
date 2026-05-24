@@ -1,5 +1,7 @@
 # ExternalSort - PHP 外部排序法
 
+![Tests](https://github.com/fishingboy/ExternalSort/actions/workflows/ci.yml/badge.svg)
+
   很久以前寫的 PHP 外部排序法
   主要是因為如果要排序的資料非常大，大到在記憶體內無法排序時
   可以使用這個外部排序來排，並可以指定一個數量的上限，超過上限才會用外部排序的機制
